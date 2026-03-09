@@ -1,20 +1,21 @@
-# 🛒 Market Queue Simulation
+# 🏠 Rent Estimation Neuron
 
-C# ile yazılmış market kasası simülasyonu. Normal kuyruk ve öncelikli kuyruk karşılaştırması yapar.
+C# ile yazılmış tek katmanlı yapay sinir hücresi (perceptron) kullanarak kira tahmini yapan proje.
 
 ## 📌 Ne Yapıyor?
 
-- Normal sıra ile müşteri işleme süresi hesaplıyor
-- Öncelikli kuyruk (az ürünlü müşteri önce) ile aynı hesabı yapıyor
-- İkisini karşılaştırıp ne kadar zaman kazanıldığını gösteriyor
-- 8'den az ve fazla ürünlü müşterileri ayrı listeliyor
+- Oda sayısı, merkeze uzaklık ve bina yaşına göre kira tahmini yapıyor
+- Sigmoid aktivasyon fonksiyonu kullanıyor
+- Delta öğrenme kuralı ile ağırlıkları güncelliyor
+- 25 ve 100 epok, farklı lambda değerleri (0.01 / 0.05 / 0.1) karşılaştırması yapıyor
+- MSE (Mean Squared Error) ile hata ölçümü yapıyor
 
 ## 🛠️ Kullanılanlar
 
 - C# / .NET 8
-- `IntQueue` — kendi yazılmış normal kuyruk
-- `PQ` — kendi yazılmış öncelikli kuyruk
-- `List`, `foreach`, `sort`
+- `Neuron` — kendi yazılmış sinir hücresi sınıfı
+- `VeriOrnek` — eğitim/test verisi sınıfı
+- Sigmoid aktivasyon, delta öğrenme kuralı, normalizasyon
 
 ## 🚀 Çalıştırmak İçin
 ```bash
